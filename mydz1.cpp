@@ -61,8 +61,16 @@ public:
   }
 
   void setworknumber(int newworknumber) { worknumber = newworknumber; }
-  void setxiaolv(double newxiaolv) { xiaolv = newxiaolv; }
 
+  void setxiaolv(double newxiaolv) {
+    newxiaolv = static_cast<double>(number) / worknumber;
+    xiaolv = newxiaolv;
+  }
+  void getinfo() {
+    std::cout << "Pipe name: " << name << "\nnumber: " << number
+              << "\nworknumber" << worknumber << "\ngongzuo xiaolv: " << xiaolv
+              << std::endl;
+  }
   int getnumber() const { return number; }
   int getworknumber() const { return worknumber; }
   double getxiaolv() const { return xiaolv; }
@@ -78,6 +86,6 @@ int main() {
   guandao guandao1("shenzhou", 250.0, false);
   guandao1.displayinfo();
   bengzhan bengzhan1("shenzhou1", 4, 2, 50.0);
-
+  bengzhan1.displayinfo();
   return 0;
 }
