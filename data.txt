@@ -1,0 +1,6 @@
+shenzhou 20 1
+jinqiu 20 0
+xinji 40 0
+---
+jinqiu 4 2 50
+xinji 20 10 50
